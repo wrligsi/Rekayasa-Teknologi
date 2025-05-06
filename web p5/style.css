@@ -1,0 +1,872 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #0a0f1a; /* very dark blue-black */
+    color: #ffffff; /* white */
+    line-height: 1.6;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+    
+.header-text {
+    font-size: 45px;
+    font-weight: 900;
+    color: #ffffff; /* white */
+    line-height: 1.1;
+    margin: 0;
+}
+    
+hr {
+    border: none;
+    border-top: 2px solid #ffffff; /* white */
+    margin: 10px auto 20px auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #1a2a4a; /* dark blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.navbar a {
+    color: #ffffff; /* white */
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    margin: 0 8px;
+}
+
+.navbar a:hover {
+    background-color: #3a4a6a; /* medium dark blue */
+    color: #ffffff; /* white */
+}
+
+/* Menu icon for mobile (hidden by default) */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.menu-icon .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #ffffff; /* white */
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* Main content styling */
+.main-content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+    background-color: #121a2b; /* dark blue-black */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+    overflow: hidden;
+}
+
+/* Centered container box for gallery */
+.gallery-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px 25px;
+    background-color: #121a2b; /* dark blue-black */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Each gallery item */
+.karya {
+    text-align: center;
+    color: #ffffff;
+    flex: 0 1 200px; /* flexible width, max 200px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Gallery images */
+.karya img {
+    height: 200px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Caption text */
+.karya p {
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.karya a {
+    color: #121a2b; /* white */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    margin: 0 6px;
+    background-color: #ffffff;
+}
+
+.karya a:hover {
+    background-color: #3a4a6a; /* medium dark blue */
+    color: #ffffff; /* white */
+}
+
+/* Logo image */
+.main-content img {
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Headings */
+.main-content b {
+    display: block;
+    color: #ffffff; /* white */
+    margin-bottom: 10px;
+}
+
+.main-content b:first-of-type {
+    font-size: 48px;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 3px;
+    line-height: 1.05;
+}
+
+.main-content b:nth-of-type(2) {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+    color: #ffffff; /* white */
+    margin-top: 0;
+    line-height: 1.05;
+}
+
+/* Horizontal rule */
+hr {
+    border: none;
+    border-top: 2px solid #ffffff; /* white */
+    margin: 20pxpx;
+}
+
+/* Yapping section */
+.yapping {
+    padding: 15px 10px;
+    font-size: 18px;
+    color: #ffffff; /* white */
+}
+
+/* Marquee styling */
+marquee {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff; /* white */
+    margin-bottom: 15px;
+    background-color: #3a4a6a;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(26, 42, 74, 0.7);
+}
+
+/* Paragraphs inside yapping */
+.yapping p {
+    margin-bottom: 15px;
+}
+
+/* Menu list */
+.yapping ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    color: #ffffff; /* white */
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .navbar a {
+        padding: 10px 12px;
+        font-size: 16px;
+        margin: 5px 4px;
+        color: #ffffff; /* white */
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .main-content {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .main-content b:first-of-type {
+        font-size: 36px;
+    }
+
+    .main-content b:nth-of-type(2) {
+        font-size: 22px;
+    }
+
+    .yapping p, .yapping ul {
+        font-size: 16px;
+    }
+}
+
+/* Contact page content styling similar to home page main-content */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px 25px;
+    background-color: #121a2b;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+    overflow: hidden;
+    color: #ffffff; /* white */
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+}
+
+/* Style for pompa page container */
+.pompa {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background-color: #121a2b; /* dark blue-black */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+    color: #ffffff; /* white */
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+}
+
+.pompa h1 {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.pompa h2 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.pompa img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    height: 600px;
+    border-radius: 12px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+}
+
+.pompa p, .pompa ol {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.pompa ol {
+    padding-left: 20px;
+}
+
+.pompa iframe {
+    display: block;
+    width: 100%;
+    height: 360px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+    border: none;
+}
+
+.pompa .kembali {
+    display: inline-block;
+    background-color: #1a2a4a; /* dark blue */
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(26, 42, 74, 0.7);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pompa .kembali:hover {
+    background-color: #3a4a6a; /* medium dark blue */
+    transform: scale(1.05);
+}
+
+/* Style for ac page container */
+.ac {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background-color: #121a2b; /* dark blue-black */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+    color: #ffffff; /* white */
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+}
+
+.ac h1 {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.ac h2 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.ac img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+}
+
+.ac p, .pompa ol {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.ac ol {
+    padding-left: 20px;
+}
+
+.ac .kembali {
+    display: inline-block;
+    background-color: #1a2a4a; /* dark blue */
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(26, 42, 74, 0.7);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ac .kembali:hover {
+    background-color: #3a4a6a; /* medium dark blue */
+    transform: scale(1.05);
+}
+
+/* Style for tomas page container */
+.tomas {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background-color: #121a2b; /* dark blue-black */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+    color: #ffffff; /* white */
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+}
+
+.tomas h1 {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.tomas h2 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.tomas img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+}
+
+.tomas p, .pompa ol {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.tomas ol {
+    padding-left: 20px;
+}
+
+.tomas .kembali {
+    display: inline-block;
+    background-color: #1a2a4a; /* dark blue */
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(26, 42, 74, 0.7);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tomas .kembali:hover {
+    background-color: #3a4a6a; /* medium dark blue */
+    transform: scale(1.05);
+}
+
+/* Style for digi page container */
+.digi {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background-color: #121a2b; /* dark blue-black */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+    color: #ffffff; /* white */
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+}
+
+.digi h1 {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.digi h2 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.digi img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    height: 600px;
+    border-radius: 12px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+}
+
+.digi p, .pompa ol {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.digi ol {
+    padding-left: 20px;
+}
+
+.digi .kembali {
+    display: inline-block;
+    background-color: #1a2a4a; /* dark blue */
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(26, 42, 74, 0.7);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.digi .kembali:hover {
+    background-color: #3a4a6a; /* medium dark blue */
+    transform: scale(1.05);
+}
+
+/* Style for hyroner page container */
+.hyroner {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background-color: #121a2b; /* dark blue-black */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+    color: #ffffff; /* white */
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+}
+
+.hyroner h1 {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.hyroner h2 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hyroner img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    height: 600px;
+    border-radius: 12px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+}
+
+.hyroner p, .pompa ol {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hyroner ol {
+    padding-left: 20px;
+}
+
+.hyroner .kembali {
+    display: inline-block;
+    background-color: #1a2a4a; /* dark blue */
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(26, 42, 74, 0.7);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hyroner .kembali:hover {
+    background-color: #3a4a6a; /* medium dark blue */
+    transform: scale(1.05);
+}
+
+/* Style for rain page container */
+.rain {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background-color: #121a2b; /* dark blue-black */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+    color: #ffffff; /* white */
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+}
+
+.rain h1 {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.rain h2 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.rain img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    height: 600px;
+    border-radius: 12px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+}
+
+.rain p, .pompa ol {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.rain ol {
+    padding-left: 20px;
+}
+
+.rain .kembali {
+    display: inline-block;
+    background-color: #1a2a4a; /* dark blue */
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(26, 42, 74, 0.7);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.rain .kembali:hover {
+    background-color: #3a4a6a; /* medium dark blue */
+    transform: scale(1.05);
+}
+
+.container h1 {
+    color: #ffffff; /* white */
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.contact-info {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Order page styling similar to home page main-content */
+.order {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+    background-color: #121a2b;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+    overflow: hidden;
+}
+
+/* Form styling inside order */
+.order form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #ffffff; /* white */
+    background: linear-gradient(135deg, #2a3a5a, #1a2a4a);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(26, 42, 74, 0.8);
+    transition: box-shadow 0.3s ease;
+}
+
+.order form:hover {
+    box-shadow: 0 12px 30px rgba(26, 42, 74, 1);
+}
+
+.order form h1 {
+    color: #ffffff; /* white */
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 0px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #3a4a6a;
+}
+
+.order form p {
+    font-size: 18px;
+    margin-bottom: 2px;
+    font-weight: 600;
+}
+
+.order form input[type="text"],
+.order form select,
+.order form textarea {
+    padding: 12px 15px;
+    border: 2px solid #3a4a6a;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #ffffff; /* white */
+    resize: vertical;
+    box-shadow: inset 0 2px 5px rgba(58, 74, 106, 0.6);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order form input[type="text"]:focus,
+.order form select:focus,
+.order form textarea:focus {
+    border-color: #1a2a4a;
+    box-shadow: 0 0 8px #1a2a4a;
+    outline: none;
+}
+
+.order form textarea {
+    min-height: 100px;
+    display: block;
+    margin-left: 0;
+}
+
+.order form input[type="submit"],
+.order form input[type="reset"] {
+    background-color: #1a2a4a;
+    color: #ffffff; /* white */
+    border: none;
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 15px;
+    width: 120px;
+    box-shadow: 0 4px 10px rgba(26, 42, 74, 0.7);
+}
+
+.order form input[type="submit"]:hover,
+.order form input[type="reset"]:hover {
+    background-color: #3a4a6a;
+    color: #ffffff; /* white */
+    transform: scale(1.05);
+}
+
+.order form input[type="reset"] {
+    background-color: #3a4a6a;
+    color: #ffffff; /* white */
+}
+
+.order form input[type="reset"]:hover {
+    background-color: #1a2a4a;
+    color: #ffffff; /* white */
+    transform: scale(1.05);
+}
+
+/* About Us page content styling similar to home page main-content */
+.konten-tentang {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px 25px;
+        background-color: #121a2b;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(26, 42, 74, 0.7);
+        overflow: hidden;
+        color: #ffffff; /* white */
+        font-family: 'Trebuchet MS', sans-serif;
+        line-height: 1.6;
+    }
+    
+    .konten-tentang h1 {
+        color: #ffffff; /* white */
+        font-size: 48px;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+    
+    .konten-tentang p {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .kelompok {
+        margin-top: 30px;
+        padding-top: 15px;
+        border-top: 2px solid #ffffff; /* white */
+    }
+    
+    .kelompok h2 {
+        color: #ffffff; /* white */
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .member {
+        background-color: #2a3a5a;
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 6px rgba(26, 42, 74, 0.3);
+        font-size: 18px;
+        color: #ffffff; /* white */
+    }
